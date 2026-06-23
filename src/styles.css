@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; font-synthesis-weight: none; text-rendering: optimizeLegibility; }
+.dark { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: rgb(99 102 241 / .22); }
