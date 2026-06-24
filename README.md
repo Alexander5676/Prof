@@ -19,9 +19,9 @@ npm run build
 
 Скопируйте `.env.example` в `.env.local` и заполните переменные:
 
-- `VITE_TELEGRAM_BOT_TOKEN` — токен Telegram-бота.
-- `VITE_TELEGRAM_CHAT_ID` — ID чата для заявок.
+- `TELEGRAM_BOT_TOKEN` — серверный токен Telegram-бота (не используйте префикс `VITE_`, чтобы секрет не попал в браузерный бандл).
+- `TELEGRAM_CHAT_ID` — серверный ID чата для заявок.
 - `VITE_GA_ID` — Google Analytics Measurement ID.
 - `VITE_YM_ID` — ID счетчика Яндекс.Метрики.
 
-Если Telegram-переменные не заданы, форма работает в демо-режиме и логирует заявку в консоль.
+Форма отправляет заявку на серверный endpoint `/api/telegram`, который читает Telegram-секреты только из серверного окружения. Если Telegram-переменные не заданы, endpoint работает в демо-режиме и логирует заявку в серверную консоль.
